@@ -12,6 +12,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -52,10 +53,10 @@ public class GPSMarkeringar extends AppCompatActivity implements OnMapReadyCallb
         LatLng gkg = new LatLng(56.024753, 14.156813); // gamla kyrkogården
         LatLng nak = new LatLng(55.989078, 14.150939); // norra åsums kyrkogård
         LatLng rlk = new LatLng(56.053280, 14.179056); // rödaleds kyrkogård
-        mMap.addMarker(new MarkerOptions().position(okg).title("Östra begravningsplatsen")); // lägga till marker
-        mMap.addMarker(new MarkerOptions().position(gkg).title("Gamla begravningsplatsen"));
-        mMap.addMarker(new MarkerOptions().position(nak).title("Norra Åsums kyrkogård"));
-        mMap.addMarker(new MarkerOptions().position(rlk).title("Rödaleds begravningsplats"));
+        mMap.addMarker(new MarkerOptions().position(okg).title("Östra begravningsplatsen").snippet(getString(R.string.obpText)).icon(BitmapDescriptorFactory.fromResource(R.drawable.pinobtrans))); // lägga till marker
+        mMap.addMarker(new MarkerOptions().position(gkg).title("Gamla begravningsplatsen").snippet(getString(R.string.gbpText)).icon(BitmapDescriptorFactory.fromResource(R.drawable.pingbtrans)));
+        mMap.addMarker(new MarkerOptions().position(nak).title("Norra Åsums kyrkogård").snippet(getString(R.string.nakText)).icon(BitmapDescriptorFactory.fromResource(R.drawable.pinnatrans)));
+        mMap.addMarker(new MarkerOptions().position(rlk).title("Rödaleds begravningsplats").snippet(getString(R.string.rlkText)).icon(BitmapDescriptorFactory.fromResource(R.drawable.pinrltrans)));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(okg, 18)); // center marker on map
         mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 123);

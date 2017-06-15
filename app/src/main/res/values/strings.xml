@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Map With Marker</string>
     <string name="title_activity_maps">Kyrkogårdar i Kristianstad</string>
+    <string name="obpText">Den nya begravningsplatsen som kallas Östra begravningsplatsen beslutades av stadsfullmäktige år 1880 att tas i bruk. Uppdraget att upprätta ritningar för området tilldelades dåvarande stadsingenjören Ludvig Hammar.</string>
+    <string name="gbpText">Den gamla kyrkogården som de flesta benämner den eller Gamla begravningsplatsen som är den mer korrekt namnet var en bit mark som församlingen i Kristianstad utvunnit söder om Skottenborg.</string>
+    <string name="nakText">Norra Åsums kyrkogård har troligen varit i bruk sedan slutet av 1100-talet, då kyrkan byggdes. Marken är är mycket lämplig för begravningsändamål och det har varit lätt att återupplåta gamla gravar för att ge plats till ny begravningar.</string>
+    <string name="rlkText">Rödaleds begravningsplats är vår "nya" begravningsplats. 1958 fick församlingen genom ett byte av mark med staden ta i bruk ett område söder om Prostens väg och som sträcker sig upp mot Nosabyvägen i norr.</string>
+
 </resources>
